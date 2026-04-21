@@ -1,5 +1,9 @@
 # playwright-teams-reporter
 
+[![npm version](https://img.shields.io/npm/v/playwright-teams-reporter)](https://www.npmjs.com/package/playwright-teams-reporter)
+[![Publish Package](https://img.shields.io/github/actions/workflow/status/rajeshyemul/playwright-teams-reporter/publish.yml?label=publish)](https://github.com/rajeshyemul/playwright-teams-reporter/actions/workflows/publish.yml)
+[![license](https://img.shields.io/npm/l/playwright-teams-reporter)](./LICENSE)
+
 Send Playwright test execution summaries to Microsoft Teams via Adaptive Cards.
 
 ## Installation
@@ -140,6 +144,31 @@ examples/output/sample-teams-payload.json
 - `prepublishOnly` runs typecheck, tests, and build
 - package contents are limited through the `files` field
 - current `publishConfig.access` is `public`
+
+## Release Routine
+
+Suggested patch release flow:
+
+1. Run `npm run release:patch`
+2. Push commit and tag with `npm run release:push`
+
+Suggested minor release flow:
+
+1. Run `npm run release:minor`
+2. Push commit and tag with `npm run release:push`
+
+Suggested major release flow:
+
+1. Run `npm run release:major`
+2. Push commit and tag with `npm run release:push`
+
+Equivalent manual flow:
+
+1. Run `npm run check`
+2. Update the version with `npm version patch|minor|major`
+3. Push commit and tag with `git push origin main --follow-tags`
+
+The GitHub Actions workflow publishes automatically when a `v*` tag is pushed.
 
 ## License
 
