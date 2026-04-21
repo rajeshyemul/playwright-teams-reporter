@@ -1,6 +1,6 @@
 {
   "name": "playwright-teams-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Playwright reporter that sends test execution summaries to Microsoft Teams channels via Adaptive Cards",
   "keywords": [
     "playwright",
