@@ -1,0 +1,59 @@
+{
+  "name": "playwright-teams-reporter",
+  "version": "1.0.0",
+  "description": "A Playwright reporter that sends test execution summaries to Microsoft Teams channels via Adaptive Cards",
+  "keywords": [
+    "playwright",
+    "reporter",
+    "ms-teams",
+    "microsoft-teams",
+    "adaptive-card",
+    "test-results",
+    "webhook"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --tsconfig tsconfig.build.json",
+    "build:watch": "tsup src/index.ts --format esm,cjs --dts --watch --tsconfig tsconfig.build.json",
+    "check": "npm run typecheck && npm test && npm run build",
+    "example:payload": "npm run build && node scripts/generate-example-payload.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "playwright test -c playwright.test.config.ts",
+    "test:teams": "playwright test -c playwright.config.ts",
+    "test:watch": "playwright test -c playwright.test.config.ts --ui",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run check"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.30.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.19.39",
+    "dotenv": "^17.4.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

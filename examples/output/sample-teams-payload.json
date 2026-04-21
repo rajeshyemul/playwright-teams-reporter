@@ -1,0 +1,389 @@
+{
+  "attachments": [
+    {
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "📋 View Zephyr Cycle",
+            "url": "https://jira.example.com/cycles/QA-2026-04"
+          },
+          {
+            "type": "Action.OpenUrl",
+            "title": "📊 View Report",
+            "url": "https://ci.example.com/reports/latest"
+          },
+          {
+            "card": {
+              "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+              "body": [
+                {
+                  "separator": true,
+                  "size": "Medium",
+                  "text": "📋 Test Cases Details",
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "wrap": true
+                },
+                {
+                  "columns": [
+                    {
+                      "items": [
+                        {
+                          "text": "Status",
+                          "type": "TextBlock",
+                          "weight": "Bolder"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "Test Name",
+                          "type": "TextBlock",
+                          "weight": "Bolder"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "stretch"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "Time (s)",
+                          "type": "TextBlock",
+                          "weight": "Bolder"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    }
+                  ],
+                  "type": "ColumnSet"
+                },
+                {
+                  "columns": [
+                    {
+                      "items": [
+                        {
+                          "text": "❌",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "checkout.spec.ts › Checkout › submits order",
+                          "type": "TextBlock",
+                          "wrap": true
+                        },
+                        {
+                          "text": "Expected status code 200 but received 500 Internal Server Error",
+                          "type": "TextBlock",
+                          "color": "Attention",
+                          "isSubtle": true,
+                          "size": "Small",
+                          "wrap": true
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "stretch"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "12.40",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    }
+                  ],
+                  "type": "ColumnSet"
+                },
+                {
+                  "columns": [
+                    {
+                      "items": [
+                        {
+                          "text": "⚠️",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "auth.spec.ts › Login › signs in valid user",
+                          "type": "TextBlock",
+                          "wrap": true
+                        },
+                        {
+                          "text": "↻ Retried 1x",
+                          "type": "TextBlock",
+                          "color": "Warning",
+                          "isSubtle": true,
+                          "size": "Small"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "stretch"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "4.20",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    }
+                  ],
+                  "type": "ColumnSet"
+                },
+                {
+                  "columns": [
+                    {
+                      "items": [
+                        {
+                          "text": "⏭️",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "search.spec.ts › Filters › handles no results",
+                          "type": "TextBlock",
+                          "wrap": true
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "stretch"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "0.00",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    }
+                  ],
+                  "type": "ColumnSet"
+                },
+                {
+                  "columns": [
+                    {
+                      "items": [
+                        {
+                          "text": "✅",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "account.spec.ts › Profile › updates preferences",
+                          "type": "TextBlock",
+                          "wrap": true
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "stretch"
+                    },
+                    {
+                      "items": [
+                        {
+                          "text": "3.10",
+                          "type": "TextBlock"
+                        }
+                      ],
+                      "type": "Column",
+                      "width": "auto"
+                    }
+                  ],
+                  "type": "ColumnSet"
+                }
+              ],
+              "type": "AdaptiveCard",
+              "version": "1.5"
+            },
+            "title": "🔎 Test Cases Details",
+            "type": "Action.ShowCard"
+          }
+        ],
+        "body": [
+          {
+            "color": "Attention",
+            "size": "Large",
+            "spacing": "Medium",
+            "text": "🧪 Test Execution Summary",
+            "type": "TextBlock",
+            "weight": "Bolder",
+            "wrap": true
+          },
+          {
+            "spacing": "Small",
+            "text": "Environment: **staging**",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "spacing": "None",
+            "text": "Test Cycle: QA-2026-04",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "isSubtle": true,
+            "spacing": "None",
+            "text": "Date: 20 Apr 2026, 03:30 PM",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "isSubtle": true,
+            "spacing": "None",
+            "text": "Execution Time: 2m 15s",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "separator": true,
+            "spacing": "Medium",
+            "text": "⚠️ Run completed with failures",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "color": "Attention",
+            "spacing": "Small",
+            "text": "Pass Rate: **50.0%**",
+            "type": "TextBlock",
+            "wrap": true
+          },
+          {
+            "columns": [
+              {
+                "items": [
+                  {
+                    "text": "Total",
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "wrap": true
+                  },
+                  {
+                    "text": "4",
+                    "type": "TextBlock",
+                    "color": "Default",
+                    "size": "Large"
+                  }
+                ],
+                "type": "Column",
+                "width": "stretch"
+              },
+              {
+                "items": [
+                  {
+                    "text": "✅ Passed",
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "wrap": true
+                  },
+                  {
+                    "text": "2",
+                    "type": "TextBlock",
+                    "color": "Good",
+                    "size": "Large"
+                  }
+                ],
+                "type": "Column",
+                "width": "stretch"
+              },
+              {
+                "items": [
+                  {
+                    "text": "❌ Failed",
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "wrap": true
+                  },
+                  {
+                    "text": "1",
+                    "type": "TextBlock",
+                    "color": "Attention",
+                    "size": "Large"
+                  }
+                ],
+                "type": "Column",
+                "width": "stretch"
+              },
+              {
+                "items": [
+                  {
+                    "text": "⏭️ Skipped",
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "wrap": true
+                  },
+                  {
+                    "text": "1",
+                    "type": "TextBlock",
+                    "color": "Warning",
+                    "size": "Large"
+                  }
+                ],
+                "type": "Column",
+                "width": "stretch"
+              },
+              {
+                "items": [
+                  {
+                    "text": "⚠️ Flaky",
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "wrap": true
+                  },
+                  {
+                    "text": "1",
+                    "type": "TextBlock",
+                    "color": "Warning",
+                    "size": "Large"
+                  }
+                ],
+                "type": "Column",
+                "width": "stretch"
+              }
+            ],
+            "spacing": "Medium",
+            "type": "ColumnSet"
+          }
+        ],
+        "type": "AdaptiveCard",
+        "version": "1.5"
+      },
+      "contentType": "application/vnd.microsoft.card.adaptive"
+    }
+  ],
+  "summary": "Test Execution Summary — staging — 20 Apr 2026, 03:30 PM",
+  "type": "message"
+}
